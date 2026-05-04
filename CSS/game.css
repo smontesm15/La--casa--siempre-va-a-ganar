@@ -5,6 +5,10 @@
     --dark: #050505;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -12,7 +16,6 @@ body {
     color: white;
     font-family: 'Inter', sans-serif;
     transition: all 0.7s ease;
-    overflow: hidden;
 }
 
 .container {
@@ -20,7 +23,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    border: 20px solid #0a0a0a;
+    border: 10px solid #111;
     position: relative;
     overflow: hidden;
     animation: aparecer 0.8s ease;
@@ -77,31 +80,35 @@ body {
 
 header {
     width: 100%;
-    padding: 1.5rem 3rem;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(0,0,0,0.2);
 }
 
 #money-display {
     font-family: ui-monospace, monospace;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
     color: #fff;
     text-shadow: 0 0 10px rgba(255,255,255,0.1);
+    white-space: nowrap;
 }
 
 #back-btn {
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.1);
-    color: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.8);
     text-transform: uppercase;
-    font-size: 0.7rem;
-    padding: 0.3rem 1.1rem;
-    letter-spacing: 0.1rem;
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+    letter-spacing: 0.1em;
     cursor: pointer;
     transition: all 0.3s ease;
+    white-space: nowrap;
+    line-height: 1.2;
 }
 
 #back-btn:hover {
