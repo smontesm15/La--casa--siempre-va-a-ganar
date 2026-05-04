@@ -7,3 +7,6 @@ Se implementan métodos de interacción, manipulación del DOM y almacenamiento 
 
 ## Página web
 https://smontesm15.github.io/La-casa-siempre-gana/
+
+## Documentación
+https://notes.commonscomputer.com/tm1:doc-smmm?view
