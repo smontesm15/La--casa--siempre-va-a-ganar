@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego - AETERNUM</title>
+    <link rel="stylesheet" href="../CSS/game.css">
+</head>
+<body>
+    <div class="container">
+        <div class="scanlines"></div>
+        <header>
+            <div id="money-display">Saldo: <span id="money-amount">$100.00</span></div>
+            <button id="back-btn">Regresar al Lobby</button>
+        </header>
+        <main>
+            <div id="game-machine">
+                <div id="result-display">¿LISTO?</div>
+                <div class="controls">
+                    <button id="bet-btn" class="btn-bet">APOSTAR $10.00</button>
+                </div>
+                <p id="game-feedback"></p>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="../Js/game.js"></script>
+</body>
+</html>

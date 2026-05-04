@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobby - AETERNUM</title>
+    <link rel="stylesheet" href="../CSS/lobby.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="lobby-title">Lobby</h1>
+            <div id="money-display">Saldo: <span id="money-amount">$100.00</span></div>
+        </header>
+        <main>
+            <div class="options">
+                <button id="play-btn" class="btn-lobby">
+                    <span class="emoji">🎰</span> JUGAR
+                </button>
+                <button id="exit-btn" class="btn-lobby btn-secondary">
+                    <span class="emoji">🚪</span> SALIR
+                </button>
+            </div>
+            <p id="lobby-msg"></p>
+        </main>
+    </div>
+
+    <!-- Custom Modal for Exit Alert -->
+    <div id="exit-modal" class="modal-overlay">
+        <div class="modal-content">
+            <p id="modal-text">No puedes salir tan fácilmente. Necesitas más fondos para pagar el peaje de salida.</p>
+            <button id="modal-close" class="modal-btn">Aceptar</button>
+        </div>
+    </div>
+
+    <script type="module" src="../Js/lobby.js"></script>
+</body>
+</html>
