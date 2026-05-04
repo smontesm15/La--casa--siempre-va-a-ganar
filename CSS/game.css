@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+body {
+    margin: 0;
+    background: #fff;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: aparecer 2s ease;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 📱 responsive */
+@media (max-width: 600px) {
+  .final-text {
+    font-size: 0.65rem !important;
+  }
+}
+
+.final-text {
+    font-size: 0.8rem;
+    margin: 1rem 0;
+    opacity: 0;
+    font-weight: 200;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    animation: fadeIn 3s forwards;
+}
+
+.final-text:nth-child(1) { animation-delay: 1s; }
+.final-text:nth-child(2) { animation-delay: 4s; }
+
+.interactive-word {
+    font-weight: 300;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 1px transparent;
+    transition: all 0.3s ease;
+    display: inline-block;
+    color: inherit;
+}
+
+.interactive-word:hover {
+    color: #ff0000;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+@media (pointer: coarse) {
+    .interactive-word {
+        padding: 10px 0; /* Larger touch target for mobile */
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

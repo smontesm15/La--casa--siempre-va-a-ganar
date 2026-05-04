@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+body {
+    margin: 0;
+    background: #050505;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.7s ease;
+    overflow: hidden;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 20px solid #0a0a0a;
+    animation: aparecer 0.6s ease;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 📱 responsive */
+@media (max-width: 600px) {
+  .container {
+    border-width: 10px;
+  }
+
+  h1 {
+    font-size: 1.2rem !important;
+    letter-spacing: 0.2em !important;
+  }
+
+  .btn-exit {
+    width: 80%;
+    padding: 1.25rem 1rem !important;
+  }
+}
+
+.scanlines {
+    background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.3) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    z-index: 50;
+    opacity: 0.2;
+}
+
+.radial-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(circle at 50% 50%, rgba(30,30,30,1) 0%, rgba(5,5,5,1) 70%);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+}
+
+#almost-subtitle {
+    display: block;
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.btn-exit {
+    position: relative;
+    overflow: hidden;
+    padding: 1.25rem 4rem;
+    font-size: 0.8rem;
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.3);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.btn-exit:hover {
+    background: #fff;
+    color: #000;
+}
+
+body.minimalist {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+body.minimalist .container {
+    background: white !important;
+    border-color: #f0f0f0 !important;
+}
+
+body.minimalist .scanlines, body.minimalist .radial-bg {
+    display: none;
+}
+
+body.minimalist .btn-exit {
+    border-color: #000 !important;
+    color: #000 !important;
+}
+
+body.minimalist .btn-exit:hover {
+    background: #000 !important;
+    color: #fff;
+}
